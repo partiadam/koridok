@@ -39,7 +39,11 @@ beker = input('Minta szerinti név: \n')
 
 #6. feladat
 
+
 for sor in lista:
-    legkisebb = min(lista, key=lambda x:x).kor
+    ido = sor.perc * 60 + sor.masodperc
+    legkisebb = min(lista, key=lambda x:x.korido).korido
     if sor.versenyzo == beker:
-       print(legkisebb)
+            print('6. feladat: ',sor.palya, legkisebb)
+            break
+        
